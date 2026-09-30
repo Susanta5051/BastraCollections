@@ -1,7 +1,5 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
 import { lazy,Suspense } from 'react'
-import Hero from '../components/Hero'
+import Hero from '../components/Hero.jsx'
 import Policy from '../components/Policy'
 import NewsletterBox from '../components/NewsLetterBox.jsx'
 

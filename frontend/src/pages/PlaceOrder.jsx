@@ -1,9 +1,7 @@
-import React,{useContext, useState} from 'react'
-import Title from '../components/Title'
-import CartTotals from '../components/CartTotals'
-import { assets } from '../assets/assets'
-import { ShopContext } from '../context/ShopContext'
-import { data } from 'react-router-dom'
+import {useContext, useState} from 'react'
+import Title from '../components/Title.jsx'
+import CartTotals from '../components/CartTotals.jsx'
+import { ShopContext } from '../context/ShopContext.jsx'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 

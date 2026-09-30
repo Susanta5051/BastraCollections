@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { useState } from 'react';
-import {assets} from '../assets/assets';
-import {Link, NavLink } from 'react-router-dom';
+import {assets} from '../assets/assets.js';
+import { NavLink } from 'react-router-dom';
 import { FaGreaterThan } from "react-icons/fa";
-import {ShopContext} from '../context/ShopContext';
+import {ShopContext} from '../context/ShopContext.js';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
