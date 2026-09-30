@@ -2,6 +2,7 @@ import React, { use, useContext ,useEffect,useState } from 'react'
 import {ShopContext} from '../context/ShopContext';
 import Title from '../components/Title';
 import ProductItem from '../components/ProductItem';
+import Loading from '../components/Loading';
 
 
 const Collections = () => {
@@ -12,7 +13,7 @@ const Collections = () => {
   const [category,setCategory]=useState([]);
   const [subCategory,setSubCategory]=useState([]);
   const [sortType,setSortType]=useState("Default");
-
+  console.log(products)
   
   const toggleCategory=(categoryName)=>{
     if(category.includes(categoryName)){
@@ -132,11 +133,26 @@ const Collections = () => {
         </div>
 
         {/* map products */}
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
+        {
+          products&& products.length > 0 ?
+          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6'>
           {filteredProducts.map(( product, index)=>(
             <ProductItem key={index} id={product._id} image={product.image} name={product.name} price={product.price}/>
             ))}
         </div>
+        :
+        <div className='flex flex-wrap gap-2'>
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+        </div>
+        }
 
       </div>
       

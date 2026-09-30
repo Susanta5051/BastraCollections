@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';  
 import RelatedProducts from '../components/RelatedProducts';
+import Loading from '../components/Loading';
 
 const Product = () => {
 
@@ -12,6 +13,7 @@ const Product = () => {
   const [image,setImage]=useState("");
   const [sized,setSized]=useState(null);
 
+  console.log("products " , productData)
 
   const fetchProductData=async ()=>{
     products.map((item)=>{
@@ -100,7 +102,7 @@ const Product = () => {
 
         </div>
     </div>
-    :null
+    :<Loading />
   )
 }
 

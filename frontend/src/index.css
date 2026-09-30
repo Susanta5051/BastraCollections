@@ -26,3 +26,21 @@ a:active hr{
     color: aliceblue
   }
 }
+
+.blink{
+  animation: blinked 2s ease-in 0s infinite;
+}
+
+@keyframes blinked{
+  0%{
+    background-color: #9CA3AF;
+  }
+
+  50%{
+    background: #6B7280;
+  }
+
+  100%{
+    background-color: #9CA3AF;
+  }
+}

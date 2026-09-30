@@ -20,11 +20,23 @@ const BestSeller = () => {
             <p className='w-1/1 px-10  text-justify-center text-xs sm:text-sm md:text-base text-grey-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis facilis architecto temporibus </p>
         </div>
 
-        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6 '>
+        {
+          products && products.length > 0 ? 
+          <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 gap-y-6 '>
           {bestSeller.map(( product, index)=>(
               <ProductItem key={index} id={product.id} image={product.image} name={product.name} price={product.price}/>
           ))}
+        </div>:
+        <div className='flex flex-wrap gap-2'>
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          <Loading />
+          
         </div>
+        }
     </div>
   )
 }
