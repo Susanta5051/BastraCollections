@@ -3,7 +3,7 @@ import { useState } from 'react';
 import {assets} from '../assets/assets.js';
 import { NavLink } from 'react-router-dom';
 import { FaGreaterThan } from "react-icons/fa";
-import {ShopContext} from '../context/ShopContext.js';
+import {ShopContext} from '../context/ShopContext.jsx';
 import { toast } from 'react-toastify';
 
 const Navbar = () => {
